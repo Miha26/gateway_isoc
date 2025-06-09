@@ -5,7 +5,7 @@ import os
 from fastapi.middleware.cors import CORSMiddleware
 app = FastAPI()
 
-print("USER_SERVICE_URL =", USER_SERVICE_URL)
+
 app.add_middleware(
     CORSMiddleware,
     allow_origins=["*"],  # sau ["http://localhost:8081"] dacă vrei să limitezi
@@ -25,7 +25,7 @@ class Note(BaseModel):
 USER_SERVICE_URL = os.getenv("USER_SERVICE_URL")
 NOTE_SERVICE_URL = os.getenv("NOTE_SERVICE_URL")
 TAG_SERVICE_URL = os.getenv("TAG_SERVICE_URL")
-
+print("USER_SERVICE_URL =", USER_SERVICE_URL)
 class User(BaseModel):
     username: str
     password: str
