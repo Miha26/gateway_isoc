@@ -18,9 +18,9 @@ class Note(BaseModel):
     user_id: str
 
 # Baze URL pentru microservicii
-USER_SERVICE_URL = "http://user-service:8000"
-NOTE_SERVICE_URL = "http://note-service:8000"
-TAG_SERVICE_URL = "http://tag-service:8000"
+USER_SERVICE_URL = "user-serviceisoc-production.up.railway.app"
+NOTE_SERVICE_URL = "note-serviceisoc-production.up.railway.app"
+TAG_SERVICE_URL = "tag-serviceisoc-production.up.railway.app"
 
 class User(BaseModel):
     username: str
