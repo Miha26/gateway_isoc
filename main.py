@@ -22,7 +22,7 @@ class Note(BaseModel):
 # Baze URL pentru microservicii
 
 
-USER_SERVICE_URL = os.getenv("USER_SERVICE_URL")
+USER_SERVICE_URL = os.getenv("USER_SERVICE_URL", "").strip()
 NOTE_SERVICE_URL = os.getenv("NOTE_SERVICE_URL")
 TAG_SERVICE_URL = os.getenv("TAG_SERVICE_URL")
 if not USER_SERVICE_URL:
